@@ -35,9 +35,8 @@ from core import (
 
 
 REPO = """
-🤖 **Music Player**
-- Repo: [GitHub](https://github.com/AsmSafone/MusicPlayer)
-- License: AGPL-3.0-or-later
+🤖 **Music Player
+Versi Vidio / audio
 """
 
 if config.BOT_TOKEN:
@@ -53,7 +52,7 @@ else:
 
 
 @client.on_message(
-    filters.command("repo", config.PREFIXES) & ~filters.bot & ~filters.edited
+    filters.command("info", config.PREFIXES) & ~filters.bot & ~filters.edited
 )
 @handle_error
 async def repo(_, message: Message):
