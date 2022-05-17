@@ -1,5 +1,5 @@
 echo ">> FETCHING UPSTREAM..."
- https://github.com/TSFDX/dzzz /dzzz
+git clone https://github.com/TSFDX/dzzz /dzzz
 echo ">> INSTALLING REQUIREMENTS..."
 cd /dzzz
 pip3 install -U -r requirements.txt
