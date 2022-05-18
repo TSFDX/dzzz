@@ -25,12 +25,12 @@ load_dotenv()
 
 class Config:
     def __init__(self) -> None:
-        self.API_ID: str = os.environ.get("API_ID", 10137497)
-        self.API_HASH: str = os.environ.get("API_HASH", 0184e156c25b7b00e63c648ea4283cf0)
-        self.SESSION: str = os.environ.get("SESSION", BQCRWxcsHkBDLoeU5_X4Y_2JtSguhGMD8pQslteSaBovZe-c3W7wwpRWBgSPb0J8Hr6CLGoTlipZGJskE5A7p1hPQXL3xOK7lusP0Lw-LDjdc9f0Ay4ZYLXVBLjjRxryZsCp2TEX1N3jvfbgEj_zi9ERkGQ697WtaFQrrLmH9FLswsfXx7PbfoyZgvDs0O4ikFxhyenQnZ75CCNTF_pvL2h_ILmbap0xKNuRqwdwmsYJEUjm2WObJcfGTMlGQvDvnxtPuWJ1ZKKfd7xsBadFFabeUrPtuRLz3QcgzbgZxyGS68uUgZtKyEWk6ObXYmvBwVWj7n5Ox6EP89qC8T4Ogzzfa5KmjwA)
-        self.BOT_TOKEN: str = os.environ.get("BOT_TOKEN", 5298712919:AAFYv7SF4wF1hcRctU-Ac-YgIZX_3-t3xFE)
+        self.API_ID: str = os.environ.get("API_ID", "10137497")
+        self.API_HASH: str = os.environ.get("API_HASH", "0184e156c25b7b00e63c648ea4283cf0")
+        self.SESSION: str = os.environ.get("SESSION", "BQCRWxcsHkBDLoeU5_X4Y_2JtSguhGMD8pQslteSaBovZe-c3W7wwpRWBgSPb0J8Hr6CLGoTlipZGJskE5A7p1hPQXL3xOK7lusP0Lw-LDjdc9f0Ay4ZYLXVBLjjRxryZsCp2TEX1N3jvfbgEj_zi9ERkGQ697WtaFQrrLmH9FLswsfXx7PbfoyZgvDs0O4ikFxhyenQnZ75CCNTF_pvL2h_ILmbap0xKNuRqwdwmsYJEUjm2WObJcfGTMlGQvDvnxtPuWJ1ZKKfd7xsBadFFabeUrPtuRLz3QcgzbgZxyGS68uUgZtKyEWk6ObXYmvBwVWj7n5Ox6EP89qC8T4Ogzzfa5KmjwA")
+        self.BOT_TOKEN: str = os.environ.get("BOT_TOKEN", "5298712919:AAFYv7SF4wF1hcRctU-Ac-YgIZX_3-t3xFE")
         self.SUDOERS: list = [
-            int(id) for id in os.environ.get("SUDOERS", " ").split() if id.isnumeric(908731482)
+            int(id) for id in os.environ.get("SUDOERS", " ").split() if id.isnumeric("908731482")
         ]
         if not self.SESSION or not self.API_ID or not self.API_HASH:
             print("ERROR: SESSION, API_ID and API_HASH is required!")
@@ -45,8 +45,8 @@ class Config:
             else "video"
         )
         self.ADMINS_ONLY: bool = os.environ.get("ADMINS_ONLY", False)
-        self.SPOTIFY_CLIENT_ID: str = os.environ.get("SPOTIFY_CLIENT_ID", 5fac2f6a995b434999ee00f39027260f)
-        self.SPOTIFY_CLIENT_SECRET: str = os.environ.get("SPOTIFY_CLIENT_SECRET", 9b28585f29a44c049ec50ff6e3df3877)
+        self.SPOTIFY_CLIENT_ID: str = os.environ.get("SPOTIFY_CLIENT_ID", "5fac2f6a995b434999ee00f39027260f")
+        self.SPOTIFY_CLIENT_SECRET: str = os.environ.get("SPOTIFY_CLIENT_SECRET", "9b28585f29a44c049ec50ff6e3df3877")
 
 
 config = Config()
