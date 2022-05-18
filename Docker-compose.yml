@@ -1,0 +1,17 @@
+version: "1.0"
+services:
+  worker:
+    build: .
+    environment:
+      SESSION: $SESSION
+      API_ID: $API_ID
+      API_HASH: $API_HASH
+      BOT_TOKEN: $BOT_TOKEN
+      SUDOERS: $SUDOERS
+      PREFIX: $PREFIX
+      QUALITY: $QUALITY
+      LANGUAGE: $LANGUAGE
+      STREAM_MODE: $STREAM_MODE
+      ADMINS_ONLY: $ADMINS_ONLY
+      SPOTIFY_CLIENT_ID: $SPOTIFY_CLIENT_ID
+      SPOTIFY_CLIENT_SECRET: $SPOTIFY_CLIENT_SECRET
