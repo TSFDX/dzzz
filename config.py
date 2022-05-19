@@ -30,13 +30,13 @@ class Config:
         self.SESSION: str = os.environ.get("SESSION", "BQCRWxcsHkBDLoeU5_X4Y_2JtSguhGMD8pQslteSaBovZe-c3W7wwpRWBgSPb0J8Hr6CLGoTlipZGJskE5A7p1hPQXL3xOK7lusP0Lw-LDjdc9f0Ay4ZYLXVBLjjRxryZsCp2TEX1N3jvfbgEj_zi9ERkGQ697WtaFQrrLmH9FLswsfXx7PbfoyZgvDs0O4ikFxhyenQnZ75CCNTF_pvL2h_ILmbap0xKNuRqwdwmsYJEUjm2WObJcfGTMlGQvDvnxtPuWJ1ZKKfd7xsBadFFabeUrPtuRLz3QcgzbgZxyGS68uUgZtKyEWk6ObXYmvBwVWj7n5Ox6EP89qC8T4Ogzzfa5KmjwA")
         self.BOT_TOKEN: str = os.environ.get("BOT_TOKEN", "5298712919:AAFYv7SF4wF1hcRctU-Ac-YgIZX_3-t3xFE")
         self.SUDOERS: list = [
-            int(id) for id in os.environ.get("SUDOERS", " ").split() if id.isnumeric("908731482")
+            int(id) for id in os.environ.get("SUDOERS", "908731482").split() if id.isnumeric()
         ]
         if not self.SESSION or not self.API_ID or not self.API_HASH:
             print("ERROR: SESSION, API_ID and API_HASH is required!")
             quit(0)
         self.SPOTIFY: bool = False
-        self.QUALITY: str = os.environ.get("QUALITY", "high").lower()
+        self.QUALITY: str = os.environ.get("QUALITY", "medium").lower()
         self.PREFIXES: list = os.environ.get("PREFIX", "!").split()
         self.LANGUAGE: str = os.environ.get("LANGUAGE", "en").lower()
         self.STREAM_MODE: str = (
